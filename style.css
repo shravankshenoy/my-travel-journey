@@ -1,0 +1,285 @@
+
+/* =====================================
+   GLOBAL STYLING
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #101820;
+    color: #ffffff;
+}
+
+
+/* =====================================
+   MAIN JOURNAL CONTAINER
+===================================== */
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+    padding: 35px 6%;
+}
+
+
+/* =====================================
+   JOURNAL HEADER
+===================================== */
+
+.journal-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.journal-header h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    letter-spacing: 0.5px;
+}
+
+.journal-header p {
+    color: #9baab7;
+    font-size: 15px;
+    margin: 0;
+}
+
+
+/* =====================================
+   STORY PANEL
+===================================== */
+
+#story-panel {
+    max-width: 1000px;
+    margin: 0 auto 35px;
+    padding: 30px;
+    background: #1c2833;
+    border: 1px solid #2d3d4b;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+#story-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    color: #ffffff;
+}
+
+#story-location {
+    font-size: 15px;
+    color: #75baff;
+    margin-bottom: 5px;
+}
+
+#story-time {
+    font-size: 13px;
+    color: #9baab7;
+    margin-bottom: 18px;
+}
+
+
+/* =====================================
+   STORY IMAGE
+===================================== */
+
+#story-image {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 13px;
+    margin: 20px 0;
+    background: #263746;
+}
+
+
+/* =====================================
+   STORY DESCRIPTION
+===================================== */
+
+#story-text {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #d5dce3;
+    margin-top: 18px;
+}
+
+
+/* =====================================
+   TIMELINE SECTION
+===================================== */
+
+.timeline-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline-section h3 {
+    font-size: 22px;
+    margin-bottom: 22px;
+    color: #ffffff;
+}
+
+
+/* =====================================
+   VERTICAL TIMELINE
+===================================== */
+
+#timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 5px 0;
+    overflow: visible;
+}
+
+
+/* Individual timeline card */
+
+.timeline-item {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+
+    padding: 20px 25px;
+
+    background: #1c2833;
+    border: 1px solid #2d3d4b;
+    border-left: 5px solid #526b82;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #d5dce3;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+
+/* Hover effect */
+
+.timeline-item:hover {
+    background: #263746;
+    border-left-color: #58aaff;
+    transform: translateX(5px);
+}
+
+
+/* Active timeline item */
+
+.timeline-item.active {
+    background: #245b88;
+    border-left: 5px solid #58aaff;
+    color: #ffffff;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,0.2);
+}
+
+
+/* =====================================
+   NAVIGATION BUTTONS
+===================================== */
+
+.navigation {
+    max-width: 1000px;
+    margin: 30px auto 50px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.navigation button {
+    flex: 1;
+
+    padding: 15px 25px;
+
+    background: #287fc5;
+    color: white;
+
+    border: none;
+    border-radius: 9px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.navigation button:hover {
+    background: #3699e8;
+}
+
+
+/* =====================================
+   SCROLLBAR
+===================================== */
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #101820;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #526b82;
+    border-radius: 10px;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
+
+    .app {
+        padding: 20px 15px;
+    }
+
+    .journal-header h1 {
+        font-size: 27px;
+    }
+
+    #story-panel {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    #story-title {
+        font-size: 23px;
+    }
+
+    #story-image {
+        height: 260px;
+    }
+
+    #story-text {
+        font-size: 15px;
+    }
+
+    .timeline-item {
+        padding: 16px;
+        font-size: 14px;
+    }
+
+    .navigation button {
+        padding: 13px 10px;
+        font-size: 13px;
+    }
+}
